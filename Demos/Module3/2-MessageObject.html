@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic web worker</title>
+	<meta charset="utf-8" />
+	<link href="Style.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<label for="name">Name:</label>
+		<input type="text" id="name" class="form-control" />
+		<button type="button" id="send-message" class="btn">Send message</button>
+	</div>
+	<div>
+		Results:
+		<ul id="result-list"></ul>
+	</div>
+
+	<!--
+		Load jQuery from a CDN
+		The SRC reference will use either HTTP or HTTPS
+		This will **only** work when served by a web server
+	-->
+	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+
+	<!-- Web worker demo -->
+	<script>
+		// wait for the document to be loaded
+		$(function () {
+			// create the worker
+			// Remember, the script executes immediately
+			var worker = new Worker('./2-MessageObject.js');
+
+			// Create event handler for onmessage
+			// Event raised when worker sends message to page
+			worker.onmessage = function (e) {
+				// retrieve data. in this example it's an object
+				var data = e.data;
+
+				// object has one property, processedName
+				var processedName = data.processedName;
+
+				// add new list item
+				$('#result-list').append('<li>' + processedName + '</li>');
+			};
+
+			// Create event handler for click on button
+			$('#send-message').click(function () {
+				// retrieve name from textbox
+				var name = $('#name').val();
+
+				// create an object to send using JSON
+				// JSON uses key/value pairs
+				var message = { name: name };
+
+				// send message to worker
+				worker.postMessage(message);
+			});
+		});
+	</script>
+</body>
+</html>

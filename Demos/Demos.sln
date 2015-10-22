@@ -21,6 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Module1", "Module1\", "{EF2
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49409"
+		SlnRelativePath = "Module1\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -42,6 +43,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Module2", "Module2\", "{641
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49414"
+		SlnRelativePath = "Module2\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -63,6 +65,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Module3", "Module3\", "{EC9
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49418"
+		SlnRelativePath = "Module3\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -84,6 +87,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Module4", "Module4\", "{10C
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49439"
+		SlnRelativePath = "Module4\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -105,6 +109,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Module5", "Module5\", "{999
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49457"
+		SlnRelativePath = "Module5\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
