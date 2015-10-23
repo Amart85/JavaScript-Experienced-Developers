@@ -69,28 +69,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Module3", "Module3\", "{EC9
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Module4", "Module4\", "{10C8CA23-D194-4192-A849-FDB2601808BD}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_49439"
-		Debug.AspNetCompiler.PhysicalPath = "Module4\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49439\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_49439"
-		Release.AspNetCompiler.PhysicalPath = "Module4\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49439\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "49439"
-		SlnRelativePath = "Module4\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Module5", "Module5\", "{999D36BE-F1DD-450A-8548-B4A258807768}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
@@ -124,8 +102,6 @@ Global
 		{641EC188-6AFA-49F2-9653-7D2A35FE03CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC9D55D4-002F-4DA9-A17B-D861640C4FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EC9D55D4-002F-4DA9-A17B-D861640C4FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10C8CA23-D194-4192-A849-FDB2601808BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10C8CA23-D194-4192-A849-FDB2601808BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{999D36BE-F1DD-450A-8548-B4A258807768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{999D36BE-F1DD-450A-8548-B4A258807768}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
