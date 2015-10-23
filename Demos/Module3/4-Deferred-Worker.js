@@ -1,8 +1,10 @@
 ﻿// Sample worker script
 
 self.onmessage = function (e) {
-	sleep(e.data.milliseconds);
-	self.postMessage({ message: 'Slept for ' + e.data.milliseconds + 'milliseconds' });
+	var startTime = new Date().toTimeString();
+	sleep(2000);
+	var output = e.data.message + ' processed at ' + startTime;
+	self.postMessage({ message: output });
 }
 
 function sleep(miliseconds) {

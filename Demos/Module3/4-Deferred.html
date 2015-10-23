@@ -7,16 +7,13 @@
 </head>
 <body>
 	<div>
-		<label for="name">Name:</label>
-		<input type="text" id="name" class="form-control" />
+		<label for="message">Message:</label>
+		<input type="text" id="message" class="form-control" />
 		<button type="button" id="send-message" class="btn">Send message</button>
 	</div>
 	<div>
 		Results:
 		<ul id="result-list"></ul>
-	</div>
-	<div>
-		<button type="button" id="stop-worker" class="btn">Stop worker</button>
 	</div>
 
 	<!--
@@ -25,12 +22,23 @@
 		This will **only** work when served by a web server
 	-->
 	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="4-Deferred-Client.js"></script>
 
 	<!-- Web worker demo -->
 	<script>
 		// wait for the document to be loaded
 		$(function () {
+			$('#send-message').click(function () {
+				var message = $('#message').val();
 
+				// get promise from method
+				var promise = processMessage(message);
+
+				// When operation completes, update list
+				promise.done(function (data) {
+					$('#result-list').append('<li>' + data + '</li>');
+				})
+			});
 		});
 	</script>
 </body>
