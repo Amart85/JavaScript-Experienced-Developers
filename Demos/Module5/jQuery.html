@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script> 
+
+// first thing to note is all jQuery functions are inside a document ready event
+// this is to prevent any jQuery code from running before the document is finished loading
+$(document).ready(function(){
+    // do div fade first, then put it in the button function and then animate div
+  
+    $("button").click(function(){//.click function can be used for more than just buttons
+    
+    $("div").fadeOut(); //this is a simple function used to fade out elements
+    
+    });
+    /*.click(function(){
+        var div = $("div");
+        div.animate({height: '300px', opacity: '0.4'}, "slow");
+        div.animate({width: '300px', opacity: '0.8'}, "slow");
+        div.animate({height: '100px', opacity: '0.4'}, "slow");
+        div.animate({width: '100px', opacity: '0.8'}, "slow");
+    });*/
+});
+</script> <!-- you can also place the script in a separate file and have it run on the html page
+<!--Just like how we import the jQuery library, you can do the same with other JS files
+    <script src="scriptFile.js"></script>
+ -->
+</head>
+<body>
+
+<button>Animation</button>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+</html>
