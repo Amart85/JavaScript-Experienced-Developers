@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Web sockets</title>
+	<link href="Style.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<label for="message">Message:</label>
+		<input type="text" class="form-control" id="message" />
+		<button type="button" class="btn" id="send-message" disabled="disabled">Send message</button>
+	</div>
+
+	<ul id="output"></ul>
+	
+	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+	
+	<script>
+		$(function () {
+			var socket = new WebSocket('ws://localhost:49439/socket.ashx');
+
+			socket.onmessage = function (e) {
+				$('#output').append('<li>' + e.data + '</li>');
+			}
+
+			socket.onopen = function () {
+				$('#send-message').removeAttr('disabled');
+			}
+
+			$('#send-message').click(function () {
+				socket.send($('#message').val());
+			})
+		});
+	</script>
+</body>
+</html>

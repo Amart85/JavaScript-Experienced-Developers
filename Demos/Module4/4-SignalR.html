@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Web sockets</title>
+	<link href="Style.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<label for="message">Message:</label>
+		<input type="text" class="form-control" id="message" />
+		<button type="button" class="btn" id="send-message" disabled="disabled">Send message</button>
+	</div>
+
+	<ul id="output"></ul>
+	
+	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
+	<script src="/signalr/hubs"></script>
+	<script>
+		$(function () {
+			var messageHub = $.connection.messageHub;
+
+			messageHub.client.messageProcessed = function (message) {
+				$('#output').append('<li>' + message + '</li>');
+			}
+
+			$.connection.hub.start().done(function () {
+				$('#send-message').removeAttr('disabled');
+				$('#send-message').click(function () {
+					var message = $('#message').val();
+					messageHub.server.processMessage(message);
+				});
+			});
+		});
+	</script>
+</body>
+</html>
