@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<link href="Style.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<button type="button" id="load-data" class="btn">Load data</button>
+	</div>
+	<div id="output"></div>
+
+	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+	<script>
+		$('#load-data').click(function () {
+			var xhr = new XMLHttpRequest();
+
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					var response = xhr.responseText;
+					$('#output').text(response);
+				}
+			}
+
+			xhr.open('GET', '/Demo.txt');
+			xhr.send();
+		});
+	</script>
+</body>
+</html>

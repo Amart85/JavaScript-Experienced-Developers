@@ -94,6 +94,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2-Ajax.html" />
+    <Content Include="1-XHR.html" />
+    <Content Include="Demo.txt" />
     <Content Include="packages.config" />
     <Content Include="socket.ashx" />
     <None Include="Web.Debug.config">
