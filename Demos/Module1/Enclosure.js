@@ -10,19 +10,19 @@ function celebrityName (firstName) {
 	return lastName;
 }
 	
-var mjName = celebrityName ("Gabrielle"); // The celebrityName outer function has returned. 
-mjName("Crevecoeur"); // This celebrity is Gabrielle Crevecoeur
+var myName = celebrityName ("Gabrielle"); // The celebrityName outer function has returned. 
+myName("Crevecoeur"); // This celebrity is Gabrielle Crevecoeur
 	
 // The enclosure (lastName) is called here after the outer function has returned above 
 // Yet, the closure still has access to the outer function's variables and parameter 
-// If you were to comment out the last line, the enclosure will never be envoked.
+// If you were to comment out the last line, the enclosure will never be invoked.
 
 
 
 
 
 
-/* DEMO on variables by reference */
+/* DEMO on variables by reference and calling enclosures*/
 
 
 function theLocation(){
