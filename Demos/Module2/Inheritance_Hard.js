@@ -3,11 +3,6 @@ var Person = function(firstName) {
   this.firstName = firstName;
 };
 
-// Add a couple of methods to Person.prototype
-Person.prototype.walk = function(){
-  console.log("I am walking!");
-};
-
 Person.prototype.sayHello = function(){
   console.log("Hello, I'm " + this.firstName);
 };
@@ -39,16 +34,12 @@ Student.prototype.sayHello = function(){
               + this.subject + ".");
 };
 
-// Add a "sayGoodBye" method
-Student.prototype.sayGoodBye = function(){
-  console.log("Goodbye!");
-};
 
 // Example usage:
 var student1 = new Student("Janet", "Applied Physics");
 student1.sayHello();   // "Hello, I'm Janet. I'm studying Applied Physics."
 student1.walk();       // "I am walking!"
-student1.sayGoodBye(); // "Goodbye!"
+
 
 // Check that instanceof works correctly
 console.log(student1 instanceof Person);  // true 

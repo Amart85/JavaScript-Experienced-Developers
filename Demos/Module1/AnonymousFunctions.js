@@ -1,4 +1,4 @@
-/* Here I will present the differen types of Anonymous Functions */
+/* Here I will present the different types of Anonymous Functions */
 
 //function expression
 var sayHi = function(){
