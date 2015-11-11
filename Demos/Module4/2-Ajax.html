@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<link href="Style.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<button type="button" id="load-data" class="btn">Load data</button>
+	</div>
+	<div id="output"></div>
+
+	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+	<script>
+		$('#load-data').click(function () {
+			$.get('/Demo.txt').done(function (data) {
+				$('#output').text(data);
+			});
+		});
+	</script>
+</body>
+</html>
